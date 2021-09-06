@@ -3,15 +3,11 @@ import _ from 'lodash';
 // ... or using `require()`
 // const { GraphQLServer } = require('graphql-yoga')
 
-const typeDefs = `
-  type Query {
-    hello(name: String): String!
-  }
-`
+const typeDefs = "src/schema/schema.graphql"
 
 const resolvers = {
     Query: {
-        hello: (_, { name }) => `Hello ${name || 'World'}`,
+        hello: (_, { name }) => `Hello my ${name || 'World'}`,
     },
 }
 
