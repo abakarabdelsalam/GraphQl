@@ -1,6 +1,7 @@
 import { GraphQLServer } from 'graphql-yoga'
 import { Query } from "./resolvers/Query.mjs"
 import { Todo } from "./resolvers/Todo.mjs"
+import { User } from "./resolvers/User.mjs"
 
 import _ from 'lodash';
 // ... or using `require()`
@@ -10,7 +11,8 @@ const typeDefs = "src/schema/schema.graphql"
 
 const resolvers = {
     Query,
-    Todo
+    Todo,
+    User
 
 };
 
