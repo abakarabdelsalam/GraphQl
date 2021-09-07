@@ -17,6 +17,7 @@ type User{
     id: ID!
     name: String!
     email: String!
+    number: Int!
     todos: [Todo]
 }
 
@@ -25,4 +26,6 @@ type Query {
     hello(name: String): String!
     getTodos: [Todo]!
     getTodoById(id:Int): Todo!
+    getUsers: [User]!
+    getUserById(id:Int): User!
   }

@@ -21,6 +21,7 @@ export const db = {
         {
             id: 1,
             name: 'Abdel',
+            number: 7,
             email: 'Abdel@yahoo.fr'
 
 

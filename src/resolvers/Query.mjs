@@ -12,4 +12,15 @@ export const Query = {
         }
         return todo;
     },
+    getUsers: (parent, { id }, context, info) => {
+        return db.users;
+    },
+    getUserById: (parent, { id }, context, info) => {
+        const usertouserdo = db.users.find((user) => user.id === id);
+        if (!user) {
+            throw new Error(`Le user ${id} nexiste pas`);
+        }
+        return user;
+    },
+
 };
